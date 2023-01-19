@@ -1,0 +1,9 @@
+# @genqlient(for: "UserInsertInput.id", pointer: true)
+mutation InsertUserOne(
+  $object: UserInsertInput!
+  ) {
+  insertUserOne(object: $object) {
+    id
+    organizationId
+  }
+}

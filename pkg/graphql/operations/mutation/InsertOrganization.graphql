@@ -1,0 +1,5 @@
+mutation InsertOrganization($objects: [OrganizationInsertInput!]!) {
+  insertOrganization(objects: $objects) {
+    affected_rows
+  }
+}

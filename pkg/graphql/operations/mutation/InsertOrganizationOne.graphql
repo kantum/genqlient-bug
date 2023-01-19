@@ -1,0 +1,6 @@
+mutation InsertOrganizationOne(
+  $object: OrganizationInsertInput!) {
+  insertOrganizationOne(object: $object) {
+    id
+  }
+}

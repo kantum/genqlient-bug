@@ -1,0 +1,23 @@
+# Default genqlient config; for full documentation see:
+# https://github.com/Khan/genqlient/blob/main/docs/genqlient.yaml
+schema: schema.graphql
+operations:
+- operations/**/*.graphql
+generated: generated/genqlient.go
+bindings:
+  date:
+    type: time.Time
+  timestamptz:
+    type: time.Time
+  timestamp:
+    type: time.Time
+  jsonb:
+    type: 'interface{}'
+      # marshaler: "github.com/nathanstitt/go-marshal/marshal.MarshalJSONB"
+      # unmarshaler: "github.com/nathanstitt/go-marshal/marshal.UnmarshalJSONB"
+  citext:
+    type: string
+  uuid:
+    type: string
+
+use_struct_references: true
